@@ -28,3 +28,9 @@ Install the command line tool globally using *npm's* `-g` option:
 * **--weasels** Override the default list of weasels words. It can be a path to a text file with each word on a new line or a JSON array passed-in directly.
 * **--skip** Optionally skip some checks. Options are the names of each check. (i.e. "Passive Voice")
 * **--formatter** Output the results using different formatters. Default is "table" but "csv" is also available.
+
+## To Do
+
+* Refactor to work with Browserify and launch a web version
+* Build spellcheck module
+* Build Checkstyle output formatter.
