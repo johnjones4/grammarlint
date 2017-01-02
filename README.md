@@ -37,4 +37,7 @@ Install the command line tool globally using *npm's* `-g` option:
 
 * Refactor to work with Browserify and launch a web version
 * Build spellcheck module
-* Build Checkstyle output formatter.
+* Build word overuse module
+* Build subject verb agreement module
+* Build capitalization detection module
+* Build Checkstyle output formatter
