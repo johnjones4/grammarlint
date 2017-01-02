@@ -5,17 +5,17 @@ const fs = require('fs');
 const async = require('async');
 const minimist = require('minimist');
 const grammarModules = require('./lib/modules');
+const utils = require('./lib/utils');
 const linter = require('./lib/linter');
 const formatters = require('./lib/formatters');
 
 const argv = minimist(process.argv.slice(2),{
-  'default': {
-    'irregulars': path.join(__dirname,'defaults','irregulars.txt'),
-    'weasels': path.join(__dirname,'defaults','weasels.txt'),
-    'skip': [],
-    'formatter': 'table'
-  }
+  'default': require('./defaults')
 });
+
+if (argv.skip && typeof argv.skip == 'string') {
+  argv.skip = utils.splitString(argv.skip);
+}
 
 if (argv._.length >= 1) {
   async.waterfall([

@@ -2,12 +2,7 @@ const async = require('async');
 const grammarModules = require('./lib/modules');
 const path = require('path');
 
-exports.defaults = {
-  'irregulars': path.join(__dirname,'defaults','irregulars.txt'),
-  'weasels': path.join(__dirname,'defaults','weasels.txt'),
-  'skip': [],
-  'formatter': 'table'
-}
+exports.defaults = require('./defaults');
 
 exports.init = function(options,done) {
   if (typeof options == 'function') {

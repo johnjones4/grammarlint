@@ -2,12 +2,14 @@ const assert = require('assert');
 const path = require('path');
 const grammarModules = require('./lib/modules');
 
-const defaultOptions = {
-  'irregulars': path.join(__dirname,'defaults','irregulars.txt'),
-  'weasels': path.join(__dirname,'defaults','weasels.txt')
-}
+var defaultOptions;
 
 describe('GrammarLint',function() {
+  before(function(done) {
+    defaultOptions = require('./defaults');
+    done();
+  });
+
   describe('Lexical Illusion',function() {
     it('Finds duplicate adjacent words.',function(done) {
       const text = [
@@ -89,12 +91,42 @@ describe('GrammarLint',function() {
         { line: 0, index: 21, length: 12, detail: 'surprisingly' },
         { line: 2, index: 9, length: 4, detail: 'very' },
         { line: 3, index: 11, length: 10, detail: 'completely' }
-      ]
+      ];
       grammarModules.weaselWords.run(text,defaultOptions,function(err,errors) {
         if (err) {
           done(err);
         } else {
           assert.strictEqual(errors.length,3);
+          errors.forEach(function(error,i) {
+            assert.strictEqual(error.line,expected[i].line);
+            assert.strictEqual(error.index,expected[i].index);
+            assert.strictEqual(error.length,expected[i].length);
+            assert.strictEqual(error.detail,expected[i].detail);
+          });
+          done();
+        }
+      });
+    });
+  });
+
+  describe('Spell Check',function() {
+    before(function(done) {
+      grammarModules.spelling.prepareForRun(defaultOptions,done);
+    })
+
+    it('Finds spelling errors.',function(done) {
+      const text = [
+        'The big holiday gift of the season seems to have been the Amazon Echo Dot. The small voice-controlled gadget was the perfect combination of low-cost and high-tech for gadget lovers and techies everywhere. Amazon\'s line of \"Echo\" products represents the first big hit seller in voice-controlled digital assistants following on the mediocre performance and reviews of such similar offerings by Apple first with Siri and then Microsoft and Google with their own voice-controlled assistants integrated into their core suite of products. With the market for digital assistants now established and Amazon solidified as a front runner, I turn my attention to the ecosystem of peripheral Internet of Things (IoT) enabled devices around it.'
+      ];
+      const expected = [
+        { line: 0, index: 409, length: 4, detail: 'Siri' },
+        { line: 0, index: 699, length: 5, detail: 'IoT' }
+      ];
+      grammarModules.spelling.run(text,defaultOptions,function(err,errors) {
+        if (err) {
+          done(err);
+        } else {
+          assert.strictEqual(errors.length,2);
           errors.forEach(function(error,i) {
             assert.strictEqual(error.line,expected[i].line);
             assert.strictEqual(error.index,expected[i].index);
