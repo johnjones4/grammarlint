@@ -3,8 +3,8 @@ const path = require('path');
 const grammarModules = require('./lib/modules');
 
 const defaultOptions = {
-  'irregulars': path.join(__dirname,'defaults','irregulars.json'),
-  'weasels': path.join(__dirname,'defaults','weasels.json')
+  'irregulars': path.join(__dirname,'defaults','irregulars.txt'),
+  'weasels': path.join(__dirname,'defaults','weasels.txt')
 }
 
 describe('GLint',function() {
