@@ -1,7 +1,7 @@
 {
-  "name": "grammar-lint",
+  "name": "glint",
   "version": "1.0.0",
-  "description": "",
+  "description": "GLint is a tool for linting your grammar.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,5 +21,12 @@
     "cli-table": "^0.3.1",
     "csv-stringify": "^1.0.4",
     "minimist": "^1.2.0"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "glint": "index.js"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
   }
 }
