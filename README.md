@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/johnjones4/grammarlint.svg?branch=master)](https://travis-ci.org/johnjones4/grammarlint)
 
+[![NPM](https://nodei.co/npm/grammarlint.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/grammarlint/)
+
+[![NPM](https://nodei.co/npm-dl/grammarlint.png)](https://nodei.co/npm/grammarlint/)
+
 ## Description
 
 This is a Node.JS implementation of the grammar verification Bash scripts by [Matt Might](http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/). Taking his work a bit further, this implementation installs as a global binary, allows for future expansion of modules, and outputs the found errors in various ways that best suit the user.
