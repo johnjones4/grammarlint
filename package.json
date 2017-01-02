@@ -1,6 +1,6 @@
 {
   "name": "grammarlint",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "description": "GrammarLint is a tool for linting your grammar.",
   "main": "index.js",
   "scripts": {
