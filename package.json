@@ -1,0 +1,25 @@
+{
+  "name": "grammar-lint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnjones4/grammar-lint.git"
+  },
+  "author": "John Jones <johnjones4@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnjones4/grammar-lint/issues"
+  },
+  "homepage": "https://github.com/johnjones4/grammar-lint#readme",
+  "dependencies": {
+    "async": "^2.1.4",
+    "cli-table": "^0.3.1",
+    "csv-stringify": "^1.0.4",
+    "minimist": "^1.2.0"
+  }
+}
