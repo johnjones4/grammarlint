@@ -1,5 +1,14 @@
+os:
+  - linux
+  - osx
+
 language: node_js
 node_js:
   - "6"
   - "6.1"
+
 script: "npm test"
+
+env:
+  global:
+    - CC=clang CXX=clang++ npm_config_clang=1
