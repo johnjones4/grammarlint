@@ -1,6 +1,6 @@
-# GLint
+# GrammarLint
 
-[![Build Status](https://travis-ci.org/johnjones4/glint.svg?branch=master)](https://travis-ci.org/johnjones4/glint)
+[![Build Status](https://travis-ci.org/johnjones4/grammarlint.svg?branch=master)](https://travis-ci.org/johnjones4/grammarlint)
 
 ## Description
 
@@ -11,7 +11,7 @@ This is a Node.JS implementation of the grammar verification Bash scripts by [Ma
 Install the command line tool globally using *npm's* `-g` option:
 
 ```
-# sudo npm install glint -g
+# sudo npm install grammarlint -g
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ Install the command line tool globally using *npm's* `-g` option:
 ### General Usage
 
 ```
-# glint /path/to/text
+# grammarlint /path/to/text
 ```
 
 ### Options

@@ -1,7 +1,7 @@
 {
-  "name": "glint",
+  "name": "grammarlint",
   "version": "1.0.0",
-  "description": "GLint is a tool for linting your grammar.",
+  "description": "GrammarLint is a tool for linting your grammar.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha test.js"
@@ -24,7 +24,7 @@
   },
   "preferGlobal": "true",
   "bin": {
-    "glint": "bin.js"
+    "grammarlint": "bin.js"
   },
   "devDependencies": {
     "mocha": "^3.2.0"

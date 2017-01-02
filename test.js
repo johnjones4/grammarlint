@@ -7,7 +7,7 @@ const defaultOptions = {
   'weasels': path.join(__dirname,'defaults','weasels.txt')
 }
 
-describe('GLint',function() {
+describe('GrammarLint',function() {
   describe('Lexical Illusion',function() {
     it('Finds duplicate adjacent words.',function(done) {
       const text = [
