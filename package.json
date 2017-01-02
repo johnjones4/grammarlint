@@ -21,7 +21,7 @@
     "cli-table": "^0.3.1",
     "csv-stringify": "^1.0.4",
     "minimist": "^1.2.0",
-    "nodehun": "^2.0.11"
+    "spellchecker": "^3.3.1"
   },
   "preferGlobal": "true",
   "bin": {
