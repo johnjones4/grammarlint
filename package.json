@@ -24,7 +24,7 @@
   },
   "preferGlobal": "true",
   "bin": {
-    "glint": "index.js"
+    "glint": "bin.js"
   },
   "devDependencies": {
     "mocha": "^3.2.0"
