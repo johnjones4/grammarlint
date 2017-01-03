@@ -51,3 +51,4 @@ Install the command line tool globally using *npm's* `-g` option:
 * Build subject verb agreement module
 * Build capitalization detection module
 * Build Checkstyle output formatter
+* Integrate https://github.com/maxogden/common-english-errors
