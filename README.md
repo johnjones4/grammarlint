@@ -31,12 +31,13 @@ Install the command line tool globally using *npm's* `-g` option:
 * **--irregulars** Override the default list of verbs used when finding passive voice. It can be a path to a text file with each verb on a new line or a JSON array passed-in directly.
 * **--weasels** Override the default list of weasels words. It can be a path to a text file with each word on a new line or a JSON array passed-in directly.
 * **--skipWords** Specify words to skip during spellcheck.
+* **--commons** Specify which words to treat as "common" during word overuse checking.
+* **--overuseThreshold** Specify frequency of use to qualify as overused. (Defaults to 10)
 * **--skip** Optionally skip some checks. Options are the names of each check. (i.e. "Passive Voice")
 * **--formatter** Output the results using different formatters. Default is "table" but "csv" is also available.
 
 ## To Do
 
-* Build word overuse module
 * Build subject verb agreement module
 * Build capitalization detection module
 * Build Checkstyle output formatter
