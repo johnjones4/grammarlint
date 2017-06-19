@@ -8,6 +8,8 @@ const grammarModules = require('./lib/modules');
 const utils = require('./lib/utils');
 const linter = require('./lib/linter');
 const formatters = require('./lib/formatters');
+const pageFetcher = require('./lib/pageFetcher');
+const validUrl = require('valid-url');
 
 const argv = minimist(process.argv.slice(2),{
   'default': require('./defaults')
@@ -36,7 +38,12 @@ if (argv._.length >= 1) {
       );
     },
     function(next) {
-      fs.readFile(argv._[0],'utf-8',next);
+      const source = argv._[0];
+      if (validUrl.isWebUri(source)) {
+        pageFetcher.fetch(source,next);
+      } else {
+        fs.readFile(source,'utf-8',next);
+      }
     },
     function(text,next) {
       linter.lint(text,argv,next);
