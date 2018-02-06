@@ -20,9 +20,9 @@
     "async": "^2.1.4",
     "cli-table": "^0.3.1",
     "csv-stringify": "^1.0.4",
-    "jsdom": "^11.0.0",
     "minimist": "^1.2.0",
     "spellchecker": "^3.3.1",
+    "textract": "^2.2.0",
     "valid-url": "^1.0.9"
   },
   "preferGlobal": "true",
